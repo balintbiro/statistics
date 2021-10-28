@@ -1,5 +1,9 @@
 #get a defined size of sample from a vector
 my_sample<-sample(100,#vector is from 1 to 1000
                   20)#sample size
-length(my_sample)
-my_sample
+
+#cumulative frequency with ordinal vairables
+#lets say these are the frquencies of grades
+my_sample<-c(123,210,212,321,213)
+cumsum(my_sample)
+
