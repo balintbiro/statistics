@@ -22,3 +22,12 @@ is_na<-is.na(my_sample)#return value is a boolean vector
 na_positions<-which(is_na)#select the TRUE value
 my_sample_naless<-my_sample[-na_positions]#subtract the missing value
 
+#calculata the range of a sample
+my_range<-range(my_sample)
+
+#interquartile range
+my_sample<-c(21,32,12,4,3,65,4,34,43,44,232,432,12,1,32,3245,2,34,5676,9,9,7676,56,6)
+my_quantiles<-quantile(my_sample, probs=c(0.25,0.75))#lower and higher quantiles
+my_quantiles<-IQR(my_sample)#Interquartie range
+
+
