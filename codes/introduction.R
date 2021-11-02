@@ -38,3 +38,9 @@ my_sd<-sd(my_sample)
 my_sample<-c(1,2,2,4,5,2,1,5,6,7,8,2,4,5,2,1,3,5)
 my_summary<-summary(my_sample)
 boxplot(my_sample)
+
+#two types of correlation
+var_a<-c(1,2,3,4,5,6,7,8,9,10)
+var_b<-c(12,21,31,45,51,67,71,83,99,109)
+my_corr<-cor(var_a,var_b, method='spearman')
+my_corr<-cor(var_a,var_b, method='pearson')
