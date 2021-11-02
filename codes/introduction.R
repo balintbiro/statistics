@@ -44,3 +44,9 @@ var_a<-c(1,2,3,4,5,6,7,8,9,10)
 var_b<-c(12,21,31,45,51,67,71,83,99,109)
 my_corr<-cor(var_a,var_b, method='spearman')
 my_corr<-cor(var_a,var_b, method='pearson')
+
+#confidence interval
+install.packages("gmodels")
+library(gmodels)
+my_sample<-c(1,2,3,1,2,3,1,3,1,2,1,2,3,1,2,231,3,1,2,1,3,12,1,3,12,2,3,12,3,123,31,2,1,23,13,3,2,44,4,5,2,34,1,2,3,12,31,2,1)
+my_ci<-ci(my_sample)
