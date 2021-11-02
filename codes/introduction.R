@@ -30,4 +30,11 @@ my_sample<-c(21,32,12,4,3,65,4,34,43,44,232,432,12,1,32,3245,2,34,5676,9,9,7676,
 my_quantiles<-quantile(my_sample, probs=c(0.25,0.75))#lower and higher quantiles
 my_quantiles<-IQR(my_sample)#Interquartie range
 
+#variance and standard deviation
+my_var<-var(my_sample)
+my_sd<-sd(my_sample)
 
+#description of a sample
+my_sample<-c(1,2,2,4,5,2,1,5,6,7,8,2,4,5,2,1,3,5)
+my_summary<-summary(my_sample)
+boxplot(my_sample)
