@@ -1,2 +1,2 @@
 # statistics
- General statistics summary for biological applications in R.
+ General statistics summary in R.
