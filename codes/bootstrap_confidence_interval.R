@@ -18,6 +18,9 @@ dim(bootstrap_samples)#check the dimsensions of our matrix
 #calculate the mean for every bootstrap samples (it will give 10000 means)
 bootstrap_means<-colMeans(bootstrap_samples)
 
+#visualize means distribution
+boxplot(bootstrap_means)
+
 #building a bootstrap confidence interval with the percentile method
 lower_ci_limit<-quantile(bootstrap_means, prob=0.025)
 higher_ci_limit<-quantile(bootstrap_means, prob=0.975)
