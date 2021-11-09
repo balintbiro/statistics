@@ -44,3 +44,10 @@ z_score<-z_score_calc(sample1=sample1,
                       sample2=sample2,
                       population1=population1,
                       population2=population2)
+
+#do the two sampeld z test with built in function
+z_score<-z.test(x=population1,
+                sigma.x=sd(population1),
+                y=population2,
+                sigma.y=sd(population2),
+                conf.level=0.95)
