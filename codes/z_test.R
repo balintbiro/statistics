@@ -19,7 +19,7 @@ z_score_calc<-function(variable,mu,sigma){
   z_score<-(mean(variable)-mu)/(sigma/sqrt(length(variable)))
 }
 z_score<-z_score_calc(my_population,mu=16,sigma=5)
-
+#####################################################################################
 #two sample version
 #condition(s) of usage:
 #-normally distributed variables with known standard deviations-->population SD so sigma
