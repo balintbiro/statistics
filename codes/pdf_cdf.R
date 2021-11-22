@@ -1,3 +1,4 @@
+#the integral of the pdf results in cdf and so the derivative of cdf results in pdf
 #create a variable and get mean and sd
 x<-seq(from=1,
        to=50,
@@ -27,7 +28,8 @@ dev.off()
 #summation<-0
 
 #define a function for getting cumulative distribution function
-cd_function<-function(element){
+#basically the trapezoid integral
+trapezoid_integral<-function(element){
   container<<-append(container,element)
   return(sum(container)/sum(pdf))
 }
@@ -36,7 +38,7 @@ cd_function<-function(element){
 container<<-c()
 
 #make the function work and visualize cdf
-cdf<-sapply(pdf,cd_function)
+cdf<-sapply(pdf,trapezoid_integral)
 png(file='cdf.png')
 plot(x,cdf)
 dev.off()
