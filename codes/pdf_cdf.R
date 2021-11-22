@@ -24,12 +24,19 @@ plot(x,pdf)
 dev.off()
 
 #define global variables
-summation<-0
-cdf<-c()
+#summation<-0
 
 #define a function for getting cumulative distribution function
-cumulative_distribution_function<-function(element){
-  summation=summation+element
-  append(cdf,summation)
+cd_function<-function(element){
+  container<<-append(container,element)
+  return(sum(container)/sum(pdf))
 }
+
+#define global variable
+container<<-c()
+
+#make the function work and visualize cdf
+cdf<-sapply(pdf,cd_function)
+png(file='cdf.png')
 plot(x,cdf)
+dev.off()
