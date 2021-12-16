@@ -29,5 +29,11 @@ transitions<-c()
 transversions<-c()
 
 #apply the previously defined function on a vector with the same length as our sequence
-
 sapply(c(1:length(seq1)), transversion_transition_rate)
+
+#calculate rates from vectors
+transitions<-sum(transitions)/length(seq1)
+transversions<-sum(transversions)/length(seq1)
+
+#calculate Kimura 2 distance from the transition, transposition rate
+kimura_dist<--(1/2)*log((1-2*(transitions)-transversions)*sqrt((1-2*transversions)))
