@@ -10,7 +10,7 @@ purins<-c('A','G')
 pyrimidines<-c('C','T')
 
 #define function for calculating Kimura 2 genetic distance
-kimura_dist<-function(index){
+transversion_transition_rate<-function(index){
   nucleotide_a<-seq1[index]
   nucleotide_b<-seq2[index]
   if (nucleotide_a!=nucleotide_b){
@@ -27,5 +27,7 @@ kimura_dist<-function(index){
 #define global variables
 transitions<-c()
 transversions<-c()
-proba<-sapply(c(1:length(seq1)), kimura_dist)
-transitions
+
+#apply the previously defined function on a vector with the same length as our sequence
+
+sapply(c(1:length(seq1)), transversion_transition_rate)
