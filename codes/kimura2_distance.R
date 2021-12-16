@@ -18,10 +18,14 @@ kimura_dist<-function(index){
         ((nucleotide_a %in% pyrimidines) & (nucleotide_b %in% pyrimidines))){
       transitions<<-append(transitions,1)
     }
+    else{
+      transversions<<-append(transversions,1)
+    }
   }
 }
 
 #define global variables
 transitions<-c()
+transversions<-c()
 proba<-sapply(c(1:length(seq1)), kimura_dist)
 transitions
