@@ -1,2 +1,2 @@
 # statistics
- General statistics summary in R.
+ General statistics summary in R and Python.
