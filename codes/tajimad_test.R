@@ -13,8 +13,14 @@ seq9<-unlist(strsplit('AAAAAAAAAAAAAAATAAAAAAATAATAAAAAAAAAAAAAA',split=""))
 #load them into a list
 sequences<-list(seq0,seq1,seq2,seq3,seq4,seq5,seq6,seq7,seq8,seq9)
 
+n<-length(sequences)
+
 #indices of the sequences
-indices<-c(1:(length(sequences)-1))
+indices<-c(1:(n-1))
 
 a1<-sum(sapply(indices, function(index) 1/index))
 a2<-sum(sapply(indices, function(index) 1/index**2))
+
+b1<-(n+1)/(3*(n-1))
+b2<-(2*(n**2+n+3)/((9*n)*(n-1)))
+
