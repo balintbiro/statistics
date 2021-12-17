@@ -24,3 +24,5 @@ a2<-sum(sapply(indices, function(index) 1/index**2))
 b1<-(n+1)/(3*(n-1))
 b2<-(2*(n**2+n+3)/((9*n)*(n-1)))
 
+c1<-b1-(1/a1)
+c2<-b2-((n+2)/(a1*n))+(a2/a1**2)
