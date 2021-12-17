@@ -37,3 +37,4 @@ transversions<-sum(transversions)/length(seq1)
 
 #calculate Kimura 2 distance from the transition, transposition rate
 kimura_dist<--(1/2)*log((1-2*(transitions)-transversions)*sqrt((1-2*transversions)))
+
